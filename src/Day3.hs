@@ -1,4 +1,4 @@
-module Day3 (part1, parseLine) where
+module Day3 (part1) where
 
 import qualified Data.Map.Strict as Map
 import Util
