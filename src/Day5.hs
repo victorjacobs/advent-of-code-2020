@@ -1,4 +1,4 @@
-module Day5 (part1, parseLine, idForRange) where
+module Day5 (part1) where
 
 type Range = (Int, Int)
 
@@ -17,4 +17,4 @@ parseLine ((xLow, xHigh), y) ('L' : xs) = parseLine ((xLow, xHigh - ceiling (fro
 parseLine ((xLow, xHigh), y) ('R' : xs) = parseLine ((xLow + ceiling (fromIntegral (xHigh - xLow) / 2.0), xHigh), y) xs
 
 idForRange :: CoordinateRange -> Int
-idForRange ((_, xHigh), (yLow, _)) = yLow * 8 + xHigh
+idForRange ((xLow, _), (yLow, _)) = yLow * 8 + xLow
